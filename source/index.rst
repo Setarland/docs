@@ -1,4 +1,4 @@
-.. meta::
+. meta::
    :description: Trading Strategy technical documentation
 
 Trading Strategy documentation
