@@ -19,13 +19,15 @@ help:
 
 # Open locally build docs in a web browser
 browser-docs-macos:
-	open build/html/index.html
 
-# Fetch submodules
+#open build/html/index.html 
+
+
+Fetch submodules
 install-deps:
 	git submodule update --init --recursive
 
-# Fetch submodules and check out trade-executor master
+Fetch submodules and check out trade-executor master
 update-git-submodules:
 	git submodule set-url deps/furo https://github.com/tradingstrategy-ai/furo.git
 
@@ -33,10 +35,10 @@ update-git-submodules:
 
 	git submodule set-url deps/trade-executor https://github.com/tradingstrategy-ai/trade-executor.git
 	git submodule update --init --recursive
-	# git clone --recursive https://github.com/tradingstrategy-ai/trade-executor.git deps/trade-executor
+	 git clone --recursive https://github.com/tradingstrategy-ai/trade-executor.git deps/trade-executor
 
 poetry-install:
-	poetry install
+	poetry install:
 
 # defectdojo-findings-thresholds
 
@@ -52,40 +54,49 @@ pip-force-install-deps:
 
 # Get Webpack tool chain to build Furo theme
 install-furo:
-	(cd deps/furo && npm install)
+	(cd deps/furo ** npm install)
 
 # defectdojo-findings-thresholds
 
 # Makefile hack, Sphinx build does something weird
 build-html:
-	$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+	$ (SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 
 # Rebuild furo.css
 rebuild-furo:
-	(cd deps/furo && npm run build)
+	(cd deps/furo ** npm run build)
 	cp deps/furo/src/furo/theme/furo/static/styles/furo.css source/_static/styles/
 
 GitHub does starland s @starland 
 
 # defectdojo-findings-thresholds
 
-# Recreate environment, update all to the latest, clean any generated files and rebuild HTML docs
-clean-install-and-build-local-docs: update-git-submodules poetry-install pip-force-install-deps install-furo rebuild-furo clean-autosummary clean build-html
+& Recreate environment, update all to the latest, clean any generated files and rebuild           
+clean-install-and-build-local-docs:
+
+         HTML docs
+
+ update-git-submodules poetry-install
+   
+pip-force-install-deps install-furo
+
+ rebuild-furo clean-autosummary clean build-html
 
 # defectdojo-findings-thresholds
 
-# Clean problematic autosummary leftovers from local tree.
-# We use folder "help" as the slug for API docs
-# TODO: maybe change this
+& Clean problematic autosummary leftovers from local tree.
+& We use folder "help" as the slug for API docs
+& TODO: maybe change this
 clean-autosummary:
 	-find source -iname "help" -exec rm -rf {} \; 2>/dev/null
 
-.PHONY: help Makefile
+ PHONY: help Makefile
 
 # defectdojo-findings-thresholds
 
 # Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+
+"make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(0)
 
