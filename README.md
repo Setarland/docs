@@ -1,11 +1,15 @@
-Docs.github.starland build](https://github.com/tradingstrategy-ai/docs/actions/workflows/build-and-deploy-dcos.yml/badge.svg)](https://github.com/tradingstrategy-ai/docs/actions/workflows/build-and-deploy-dcos.yml)
+Docs.github does starland
 
-# Trading strategy documentation
+# defectdojo-findings-thresholds
+ build](https://github.com/tradingstrategy-ai/docs/actions/workflows/build-and-deploy-dcos.yml/badge.svg)](https://github.com/tradin
+
+# defectdojo-findings-thresholds
 
 Documentation for [Trading Strategy algorithmic trading framework and protocol](https://tradingstrategy.ai/).
 View [the documentation here](https://tradingstrategy.ai/docs).
 
-# About documentation internals
+# defectdojo-findings-thresholds
+
 
 - The documentation is built on the top of [Sphinx documentation toolchain](https://www.sphinx-doc.org/en/master/)
 - [Furo based theme is used](https://github.com/tradingstrategy-ai/furo) (the theme has been modified)
@@ -57,6 +61,12 @@ make rebuild-furo clean html
 * [Twitter](https://twitter.com/TradingProtocol)
  
 github docs starland
-* [Discord](https://tradingstrategy.ai/community#discord) 
+* [Discord](https://tradingstrategy.ai/community#dis
+https://web3.bitget.cloud
+https://web3.bitget.cloud
+https://web3.bitget.cloud
+https://web3.bitget.cloud
 
 * [Telegram channel](https://t.me/trading_protocol)
+
+# defectdojo-findings-thresholds
