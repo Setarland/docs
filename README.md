@@ -1,4 +1,4 @@
-[![Docs.github.starland build](https://github.com/tradingstrategy-ai/docs/actions/workflows/build-and-deploy-dcos.yml/badge.svg)](https://github.com/tradingstrategy-ai/docs/actions/workflows/build-and-deploy-dcos.yml)
+[[Docs.github.starland build](https://github.com/tradingstrategy-ai/docs/actions/workflows/build-and-deploy-dcos.yml/badge.svg)](https://github.com/tradingstrategy-ai/docs/actions/workflows/build-and-deploy-dcos.yml)
 
 # Trading strategy documentation
 
@@ -15,7 +15,7 @@ View [the documentation here](https://tradingstrategy.ai/docs).
 
 # Building locally
 
-github docs started 
+github docs started s
 [pyproject.toml](./pyproject.toml) is automatically pulling the master version of the packages.
 
 To build everything from the scratch: 
@@ -50,7 +50,7 @@ make rebuild-furo clean html
 
 # Community
 
-* [Trading Strategy github s website](https://tradingstrategy.ai)
+* [Trading Strategy github docs s website](https://tradingstrategy.ai)
 
 * [Blog](https://tradingstrategy.ai/blog)
 
