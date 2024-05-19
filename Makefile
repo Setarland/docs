@@ -1,5 +1,6 @@
-# Make Trading Strategy docs
-#
+# Make Trading Strategy docs github.com 
+
+# defectdojo-findings-thresholds
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
@@ -14,7 +15,7 @@ BUILDDIR      = build
 
 # Put it first so that "make" without argument is like "make help".
 help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$ (SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 # Open locally build docs in a web browser
 browser-docs-macos:
@@ -27,12 +28,17 @@ install-deps:
 # Fetch submodules and check out trade-executor master
 update-git-submodules:
 	git submodule set-url deps/furo https://github.com/tradingstrategy-ai/furo.git
+
+# defectdojo-findings-thresholds
+
 	git submodule set-url deps/trade-executor https://github.com/tradingstrategy-ai/trade-executor.git
 	git submodule update --init --recursive
 	# git clone --recursive https://github.com/tradingstrategy-ai/trade-executor.git deps/trade-executor
 
 poetry-install:
 	poetry install
+
+# defectdojo-findings-thresholds
 
 # TODO: Some hacks here because Poetry does not pick up right
 # packages always so that docs would get correctly built
@@ -42,10 +48,13 @@ pip-force-install-deps:
 	pip install -e "deps/trade-executor[qstrader,execution,web-server,quantstats]"
 	pip install backtrader
 
+# defectdojo-findings-thresholds
+
 # Get Webpack tool chain to build Furo theme
 install-furo:
 	(cd deps/furo && npm install)
 
+# defectdojo-findings-thresholds
 
 # Makefile hack, Sphinx build does something weird
 build-html:
@@ -56,8 +65,14 @@ rebuild-furo:
 	(cd deps/furo && npm run build)
 	cp deps/furo/src/furo/theme/furo/static/styles/furo.css source/_static/styles/
 
+GitHub does starland s @starland 
+
+# defectdojo-findings-thresholds
+
 # Recreate environment, update all to the latest, clean any generated files and rebuild HTML docs
 clean-install-and-build-local-docs: update-git-submodules poetry-install pip-force-install-deps install-furo rebuild-furo clean-autosummary clean build-html
+
+# defectdojo-findings-thresholds
 
 # Clean problematic autosummary leftovers from local tree.
 # We use folder "help" as the slug for API docs
@@ -67,7 +82,12 @@ clean-autosummary:
 
 .PHONY: help Makefile
 
+# defectdojo-findings-thresholds
+
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(0)
+
+# defectdojo-findings-thresholds
+
